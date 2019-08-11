@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">
+      Lista de Clientes
+    </h6>
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Edad</th>
+              <th>Fecha Nacimiento</th>
+            </tr>
+          </thead>
+      <tbody>
+        <tr *ngFor="let client of clientList">
+          <td>{{client.nombre}}</td>
+          <td>{{client.apellido}}</td>
+          <td>{{client.edad}}</td>
+          <td>{{client.fechaNacimiento}}</td>
+          <td>
+            <a class="btn btn-secondary text-white" (click)="onEdit(client)">
+                <i class="far fa-edit"></i>
+            </a>
+            <a class="btn btn-danger text-white" (click)="onDelete(client.$key)">
+                <i class="fas fa-trash-alt"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Promedio de Edades</td>            
+          <td>                
+              {{promedioEdades}}        
+          </td>            
+        </tr>
+      </tfoot>
+      <tfoot>
+          <tr>
+            <td>Desviacion estandar de las Edades</td>            
+            <td>                
+                {{desviacionEstandar}}        
+            </td>            
+          </tr>
+        </tfoot>
+    </table>
+  </div>
+</div>

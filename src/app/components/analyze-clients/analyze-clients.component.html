@@ -1,0 +1,30 @@
+<div class="card">
+        <div class="card-body">
+          <h6 class="text-center">
+            Analisis de Datos de Clientes
+          </h6>
+          <table class="table table-sm table-hover">
+              <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Probable Fecha de Muerte</th>
+                  </tr>
+                </thead>
+            <tbody>
+              <tr *ngFor="let client of clientList">
+                <td>{{client.nombre}}</td>
+                <td>{{client.apellido}}</td>
+                <td>{{client.edad}}</td>
+                <td>{{client.fechaNacimiento}}</td>
+                <td>{{client.probableFechaMuerte | date:'d MMM y, h:mm:ss a' }}</td>
+
+              
+              </tr>
+            </tbody>
+            
+          </table>
+        </div>
+      </div>
