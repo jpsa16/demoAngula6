@@ -1,27 +1,26 @@
-# DemoAngular6
+# Demo Angular 6 con Firebase!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+El demo construido permite registrar datos de clientes, calcular sus edades promedios, la desviación estándar de esas edades y finalmente mostrar en una lista la clientes con su probable fecha de muerte.
 
-## Development server
+## Desviación Estándar
+La fórmula empleada es *Desviación Estándar Muestral*: 
+![Fórmula de Desviación Estándar Muestral ](desviacion-estandar-muestral.svg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Cálculo de la fecha probable de muerte de los empleados.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para calcular la fecha probable de muerte de los empleados, se utilizó la esperanza de vida del país de origen o donde vive el empleado. Para la muestra se tienen como ejemplo 2 países: 
+ - Perú: 76 años (promedio)
+ - Argentina: 77 años (promedio) 
+ - Somalia: 55 años (promedio)
+ - [fuente](https://es.wikipedia.org/wiki/Anexo:Pa%C3%ADses_por_esperanza_de_vida)
 
-## Build
+#Asepcto Tecnico del Proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Generado con [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
 
-## Running unit tests
+## Para su ejecución
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+$ npm install firebase angularfire2
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`ng serve` para a deplegar el localhost. Luego ir a `http://localhost:4200/`. 

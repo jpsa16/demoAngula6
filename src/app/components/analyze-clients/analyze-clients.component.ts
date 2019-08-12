@@ -30,6 +30,7 @@ export class AnalyzeClientsComponent implements OnInit {
           this.cliente = x;
           //calcular probable fecha de muerte
           let deadYear = this.getYearOf (new Date()) + (this.cliente.expectativaDeVida - this.cliente.edad);
+          console.log("year "+deadYear)
           let fechaDesde = new Date(deadYear+"-01-01");
           let fechaHasta = new Date(deadYear+"-12-01");
           let deadDate = this.getRandomDate(fechaDesde,fechaHasta);

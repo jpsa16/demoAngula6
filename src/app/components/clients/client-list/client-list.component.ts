@@ -63,7 +63,7 @@ export class ClientListComponent implements OnInit {
   }
 
   onDelete($key: string) {
-    if(confirm('Are you sure you want to delete it?')) {
+    if(confirm('Desea eliminar el producto?')) {
       this.clientService.deleteClient($key);
       //this.toastr.warning('Deleted Successfully', 'Client Removed');
     }

@@ -1,15 +1,28 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-5">
-        <app-client></app-client>
-      </div>
-      <div class="col-md-7 text-center">          
-          <img width="300" alt="Angular Logo" src="../../../assets/intercorp_web-768x704.png">
-          <app-client-list></app-client-list>
-        </div>
+  <div class="row">
+    <div class="col-md-12">
+      <img width="300" alt="Angular Logo" src="../../../assets/intercorp_web-768x704.png">
     </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <button *ngIf="!agregar" class="btn btn-primary" (click)="setModoAgregar()">
+          <i class="fas fa-plus-circle"></i> Agregar Cliente
+        </button>
+        <button *ngIf="!agregar" class="btn btn-info" (click)="setModoAnalisis()">
+          <i class="fas fa-sync-alt"></i> Ver Analisis de Datos
+        </button>
+        <button *ngIf="agregar" class="btn btn-info" (click)="setModoLista()">
+            <i class="fas fa-sync-alt"></i> Ver Lista de Datos
+          </button>
+      </div>
+      <app-client-list *ngIf="listaVisible" ></app-client-list>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <app-client *ngIf="agregar"></app-client>
+  </div>
   <br>
-    <app-analyze-clients></app-analyze-clients>
+  <app-analyze-clients *ngIf="listaAnalisisVisible"></app-analyze-clients>
 
 </div>
-  

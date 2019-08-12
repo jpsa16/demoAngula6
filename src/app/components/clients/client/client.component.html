@@ -1,70 +1,55 @@
-<div class="card mt-5">
+<div class="card">
   <div class="card-body">
-      <form #clientForm="ngForm" (ngSubmit)="onSubmit(clientForm)">
+    <h6 class="text-center">
+      Registro de Clientes
+    </h6>
+    <div class="card mt-5">
+      <div class="card-body">
+        <form #clientForm="ngForm" (ngSubmit)="onSubmit(clientForm)">
           <!-- TO UPDATE -->
           <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="clientService.selectedClient.$key">
 
           <div class="form-group">
             <label> Nombre : </label>
 
-            <input 
-              type="text"
-              class="form-control"
-              name="nombre"
-              #name="ngModel"
-              [(ngModel)]="clientService.selectedClient.nombre"
-              required
-              >
+            <input type="text" class="form-control" name="nombre" #name="ngModel"
+              [(ngModel)]="clientService.selectedClient.nombre" required>
           </div>
           <div class="form-group">
-              <label> Apellido : </label>
+            <label> Apellido : </label>
 
-              <input 
-                type="text"
-                class="form-control"
-                name="apellido"
-                #category="ngModel"
-                [(ngModel)]="clientService.selectedClient.apellido"
-                >
-            </div>
+            <input type="text" class="form-control" name="apellido" #category="ngModel"
+              [(ngModel)]="clientService.selectedClient.apellido">
+          </div>
           <div class="form-group">
             <label> Edad : </label>
-            <input 
-              type="number"
-              class="form-control"
-              name="edad"
-              #location="ngModel"
-              [(ngModel)]="clientService.selectedClient.edad"
-              >
+            <input type="number" class="form-control" name="edad" #location="ngModel"
+              [(ngModel)]="clientService.selectedClient.edad">
           </div>
           <div class="form-group">
             <label> Fecha de Nacimiento : </label>
-            <input 
-              type="date"
-              class="form-control"
-              name="fechaNacimiento"
-              #location="ngModel"
-              [(ngModel)]="clientService.selectedClient.fechaNacimiento"
-              >
+            <input type="date" class="form-control" name="fechaNacimiento" #location="ngModel"
+              [(ngModel)]="clientService.selectedClient.fechaNacimiento">
           </div>
           <div class="form-group">
-              <label> Pais de Origen : </label>
-              <select [(ngModel)]="selectedPais" 
-              class="form-control"
-              name="pais" >
-                  <option [ngValue]="pais" *ngFor="let pais of paisesList">{{pais.nombre}}</option>
-              </select>
+            <label> Pais de Origen : </label>
+            <select [(ngModel)]="selectedPais" class="form-control" name="pais">
+              <option [ngValue]="pais" *ngFor="let pais of paisesList">{{pais.nombre}}</option>
+            </select>
 
           </div>
 
           <div class="form-group">
             <button class="btn btn-primary" type="submit">
-                <i class="fas fa-plus-circle"></i> Agregar Cliente
+              <i class="fas fa-plus-circle"></i> Guardar
             </button>
             <button class="btn btn-secondary" type="reset" (click)="resetForm(clientForm)">
-                <i class="fas fa-sync-alt"></i> Reset
+              <i class="fas fa-sync-alt"></i> Reset
             </button>
+            
           </div>
         </form>
+      </div>
+    </div>
   </div>
 </div>
