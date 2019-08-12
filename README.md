@@ -9,13 +9,13 @@ La fórmula empleada es *Desviación Estándar Muestral*:
 ## Cálculo de la fecha probable de muerte de los empleados.
 
 
-Para calcular la fecha probable de muerte de los empleados, se utilizó la esperanza de vida del país de origen o donde vive el empleado. Para la muestra se tienen como ejemplo 2 países: 
+Para calcular la fecha probable de muerte de los empleados, se utilizó la esperanza de vida del país de origen o donde vive el empleado. Para la muestra se tienen como ejemplo 3 países: 
  - Perú: 76 años (promedio)
  - Argentina: 77 años (promedio) 
  - Somalia: 55 años (promedio)
  - [fuente](https://es.wikipedia.org/wiki/Anexo:Pa%C3%ADses_por_esperanza_de_vida)
 
-#Asepcto Tecnico del Proyecto
+# Aspecto Tecnico del Proyecto
 
 Generado con [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
 
